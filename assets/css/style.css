@@ -1,0 +1,145 @@
+:root {
+    /*Colors */
+    /*Primary */
+    /*Text */
+    --Very_dark_desaturated_blue: hsl(238, 29%, 16%);
+    --Soft_red: hsl(14, 88%, 65%);
+
+    /*Gradient */
+    /*Background gradient: */
+    --Soft_violet: hsl(273, 75%, 66%);
+    --Soft_blue: hsl(240, 73%, 65%);
+
+    /*Neutral */
+    /*Text */
+    --Very_dark_grayish_blue: hsl(237, 12%, 33%);
+    --Dark_grayish_blue: hsl(240, 6%, 50%);
+
+    /*Dividers */
+    --Light_grayish_blue: hsl(240, 5%, 91%);
+
+    /*font size*/
+    --fontSize: 12px;
+}
+
+html {
+    font-size: var(--fontSize);
+}
+
+body {
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.principal {
+    background: var(--Light_grayish_blue);
+    border-radius: 18px;
+    height: 509px;
+    width: 920px;
+    display: grid;
+    grid-template-columns: 369px 1fr;
+    gap: 6rem;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 1260% 65%;
+}
+
+.imagem-principal {
+    position: relative;
+}
+
+.container-interno {
+    background: url(../images/illustration-woman-online-desktop.svg) no-repeat;
+    height: 100%;
+    background-position: 100% center;
+}
+
+.caixa {
+    position: absolute;
+    top: 45%;
+    left: -25%;
+}
+
+.container-acordeon {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+}
+
+.questoes {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.questoes-acordeon {
+    width: 360px;
+    border-bottom: 1px solid #e0dfdf;
+}
+
+.titulo {
+    font-size: 3rem;
+    margin-top: 0px;
+}
+
+.questao {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.titulo-questao {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1.4rem 0rem;
+    color: var(--Very_dark_grayish_blue);
+}
+
+.titulo-questao:hover{
+    color: var(--Soft_red);
+}
+
+.questao img {
+    align-self: center;
+}
+
+.resposta {
+    display: none;
+}
+
+.active h3:hover{
+    color: var(--Soft_red);
+}
+
+.active .resposta{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    color: --Dark_grayish_blue;
+}
+
+.active h3{
+    font-weight: 700;
+    color: var(--Very_dark_desaturated_blue);
+}
+
+.active img{
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 0.6em;
+}
